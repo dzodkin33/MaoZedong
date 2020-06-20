@@ -17,12 +17,18 @@ MaoZedong is a joke project my pals and I are doing. This discord bot sends a ra
 
 ## Road map
 
-> Finish the .xls 150 quotes database -- ~40-45% done -- []
+> Finish the .xls 150 quotes database -- ~40-45% done -- [] 
+
 > Create a base bot, posing random quotes from the .xls -- done -- [x]
-> Write readme.txt and creat a GitHub page -- somewhat done --
-> Make a batter directory and general improvements for UE --
+
+> Write readme.txt and creat a GitHub page -- somewhat done -- []
+
+> Make a batter directory and general improvements for Ux -- []
+
 > Script for sources of quotes -- []
+
 > Script for more quotes base on sources of quotes -- []
+
 > Script for reading quotes from webpages and offloading them to .xls -- []
 
 ## Additional Todo
