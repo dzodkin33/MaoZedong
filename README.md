@@ -13,15 +13,15 @@ MaoZedong is a joke project my pals and I are doing. This discord bot sends a ra
 ## Planned Features 
 - Sources for quotes on request. 
 - Scripts for reading quotes from webpages and offloading them to .xls so you can   get even more quotes!
-- Permanent Revolution.
+- [Permanent Revolution.](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Road map
 
-> Finish the .xls 150 quotes database -- ~40-45% done -- [] 
+> Finish the .xls 150 quotes database -- done -- [x] 
 
 > Create a base bot, posing random quotes from the .xls -- done -- [x]
 
-> Write readme.txt and creat a GitHub page -- somewhat done -- []
+> Write readme.txt and creat a GitHub page -- somewhat done -- [x]
 
 > Make a batter directory and general improvements for Ux -- []
 
