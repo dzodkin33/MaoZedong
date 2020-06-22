@@ -25,6 +25,15 @@ quotes = pd.read_excel('/MaoZedong/quotes.xls')
 Mao_content = {key: [] for key in range(1, 8)}
 for i in Mao_content.keys():
     Mao_content[i] = quotes.columns[i-1]
+    
+    
+#A command sending the contnet of the quotations
+@bot.command(aliases = ['contents', 'CONTENTS', 'CONTENT', 'Contents'])
+async def content(ctx):
+        await ctx.send('Contents:')
+    for i in Mao_content.keys():
+        await ctx.send(f"{i} - {Mao_content[i]}")
+
 
 #Activate the bot
 @bot.event
@@ -43,7 +52,6 @@ async def content(ctx):
 async def direct(ctx, *, n):
     await ctx.send(random.choice(quotes[quotes[Mao_content[int(n)]].isnull() == False]
         .loc[:, Mao_content[int(n)]]))
-
 
 
 #A command sending an absolute random quote form .xls
