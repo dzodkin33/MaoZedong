@@ -38,18 +38,12 @@ async def content(ctx):
     await ctx.send(Mao_content)
 
 
-#A command sending a random quote from the 1926-1927 period
-@bot.command(aliases = ['1', '1926-1927'])
-async def one(ctx):
-    await ctx.send(random.choice(quotes[quotes[Mao_content[1]].isnull() == False]
-        .loc[:,Mao_content[1]]))
+#A command with the direct referal accroding to the content
+@bot.command(aliases = ['quote', 'personal'])
+async def direct(ctx, *, n):
+    await ctx.send(random.choice(quotes[quotes[Mao_content[int(n)]].isnull() == False]
+        .loc[:, Mao_content[int(n)]]))
 
-
-#A command sending a random quote from 1937 “On Practice” and “On Contradiction”
-@bot.command(aliases = ['2', '1937'])
-async def two(ctx):
-    await ctx.send(random.choice(quotes[quotes[Mao_content[2]].isnull() == False]
-        .loc[:,Mao_content[2]]))
 
 
 #A command sending an absolute random quote form .xls
