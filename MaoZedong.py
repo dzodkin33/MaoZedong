@@ -14,7 +14,7 @@ import pandas as pd
 
 #Declare our client and bot
 client = discord.Client()
-bot = commands.Bot(command_prefix = 'Mao_')
+bot = commands.Bot(command_prefix = 'Mao_', case_insensitive = True)
 
 
 #Load all the quotes from exel fail
@@ -25,14 +25,6 @@ quotes = pd.read_excel('/MaoZedong/quotes.xls')
 Mao_content = {key: [] for key in range(1, 8)}
 for i in Mao_content.keys():
     Mao_content[i] = quotes.columns[i-1]
-    
-    
-#A command sending the contnet of the quotations
-@bot.command(aliases = ['contents', 'CONTENTS', 'CONTENT', 'Contents'])
-async def content(ctx):
-        await ctx.send('Contents:')
-    for i in Mao_content.keys():
-        await ctx.send(f"{i} - {Mao_content[i]}")
 
 
 #Activate the bot
@@ -40,11 +32,13 @@ async def content(ctx):
 async def on_ready():
     print('Mao is active')
 
-
-#A command sending the contnet of the quotation book
-@bot.command(aliases = ['contents', 'Content', 'Contents'])
+    
+#A command sending the contnet of the quotations
+@bot.command(aliases = ['contents'])
 async def content(ctx):
-    await ctx.send(Mao_content)
+        await ctx.send('Contents:')
+    for i in Mao_content.keys():
+        await ctx.send(f"{i} - {Mao_content[i]}")
 
 
 #A command with the direct referal accroding to the content
